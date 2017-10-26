@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "school"; ObjectID = "7hZ-CB-Yhq"; */
+"7hZ-CB-Yhq.text" = "school";
+
+/* Class = "UINavigationItem"; title = "Course"; ObjectID = "7oM-46-8hE"; */
+"7oM-46-8hE.title" = "Course";
+
+/* Class = "UIButton"; normalTitle = "Search By Language"; ObjectID = "Eo7-HA-1Gy"; */
+"Eo7-HA-1Gy.normalTitle" = "Search By Language";
+
+/* Class = "UITextField"; text = "Choose which language(s) you would like to study (Required)"; ObjectID = "Ltp-f6-aCa"; */
+"Ltp-f6-aCa.text" = "Choose which language(s) you would like to study (Required)";
+
+/* Class = "UILabel"; text = "language"; ObjectID = "SeC-O8-3ea"; */
+"SeC-O8-3ea.text" = "language";
+
+/* Class = "UIButton"; normalTitle = "Search By Location"; ObjectID = "XHy-yE-PCa"; */
+"XHy-yE-PCa.normalTitle" = "Search By Location";
+
+/* Class = "UIBarButtonItem"; title = "Search Again"; ObjectID = "bZs-vE-lXT"; */
+"bZs-vE-lXT.title" = "Search Again";
+
+/* Class = "UILabel"; text = "classcode"; ObjectID = "dcN-pA-YgI"; */
+"dcN-pA-YgI.text" = "classcode";
+
+/* Class = "UILabel"; text = "city"; ObjectID = "mc6-8N-u5t"; */
+"mc6-8N-u5t.text" = "city";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "mlJ-5u-fHp"; */
+"mlJ-5u-fHp.normalTitle" = "Search";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "nJE-7I-szZ"; */
+"nJE-7I-szZ.title" = "Detail";
+
+/* Class = "UILabel"; text = "offered"; ObjectID = "yCW-8x-sAj"; */
+"yCW-8x-sAj.text" = "offered";
