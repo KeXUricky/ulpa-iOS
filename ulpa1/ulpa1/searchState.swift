@@ -98,6 +98,7 @@ class searchState: UIViewController, UITableViewDelegate, UITableViewDataSource 
             self.stateList.append(items[index])
             
         }
+        // show an alert if users did not select any states
         if self.stateList.count == 0{
             let myAlert = UIAlertController(title: "You must select at least one state!",
                                             message: nil, preferredStyle: UIAlertControllerStyle.alert)

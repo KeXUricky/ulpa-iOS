@@ -102,6 +102,7 @@ class searchSchool: UIViewController, UITableViewDelegate, UITableViewDataSource
         for index in selectedIndexs {
             self.schoolList.append(items[index])
         }
+        // show an alert if users did not select any universities
         if self.schoolList.count == 0{
             let myAlert = UIAlertController(title: "You must select at least one university!",
                                             message: nil, preferredStyle: UIAlertControllerStyle.alert)

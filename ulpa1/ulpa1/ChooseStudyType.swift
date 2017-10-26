@@ -24,15 +24,20 @@ class ChooseStudyType: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     var intensive = ["Regular","Intensive","Both"]
     var studyChoice = ["Fully online","On-Campus","Both"]
+    // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! LanguageVC
         controller.langlist = self.langlist
         controller.intensive = self.textbox1.text!
         controller.studyType = self.textbox2.text!
     }
+
+    // the following code is used to control the pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var countrows : Int = intensive.count
         if pickerView == dropdown2 {
@@ -42,7 +47,7 @@ class ChooseStudyType: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         return countrows
     }
-    
+      // match the contains of pickerview to array
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == dropdown1 {
             
@@ -62,7 +67,7 @@ class ChooseStudyType: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
     
     
-    
+    //match the textfield with pickerview 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == dropdown1 {
             self.textbox1.text = self.intensive[row]
@@ -85,6 +90,7 @@ class ChooseStudyType: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //default value is "both"
         self.textbox1.text = "Both"
         self.textbox2.text = "Both"
         
@@ -95,7 +101,7 @@ class ChooseStudyType: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // update the text in textbox
     @IBAction func toLanVC(_ sender: AnyObject) {
         self.isIntensive = self.textbox1.text!
         self.studyType = self.textbox2.text!

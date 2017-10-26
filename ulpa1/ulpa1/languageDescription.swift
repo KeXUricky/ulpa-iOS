@@ -4,7 +4,7 @@
 //
 //  Created by Ke XU on 2017/10/17.
 //  Copyright © 2017年 Unimelb. All rights reserved.
-//
+//a label and a textview to display the name and description of a language
 
 import Foundation
 import UIKit

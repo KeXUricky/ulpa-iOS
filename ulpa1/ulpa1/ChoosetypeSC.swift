@@ -34,6 +34,8 @@ class ChoosetypeSC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         controller.studyType = self.textbox2.text!
         controller.schoolLists = self.schoolList
     }
+
+        // the following code is used to control the pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -46,7 +48,7 @@ class ChoosetypeSC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         
         return countrows
     }
-    
+    // match the contains of pickerview to array
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == dropdown1 {
             

@@ -33,7 +33,7 @@ class contact :UIViewController,UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-
+    //  move the scrollview to proper position
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == phonenumber{
             self.inputView?.becomeFirstResponder()
@@ -48,10 +48,12 @@ class contact :UIViewController,UITextFieldDelegate{
 
         
     }
+    // return to initial position after editting 
     func textFieldDidEndEditing(_ textField: UITextField) {
         scrollView.setContentOffset(CGPoint.init(x:0, y: -64), animated: true)
     }
     
+    // check input of each textfield 
     @IBAction func submitButton(_ sender: UIButton) {
         if self.yourMessage.text == "" {
             let myAlert = UIAlertController(title: "Can't send empty message!",
@@ -112,6 +114,7 @@ class contact :UIViewController,UITextFieldDelegate{
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
          view.endEditing(true)
     }
+    //check whether a string can be int
     func isPurnInt(string: String) -> Bool {
         
         let scan: Scanner = Scanner(string: string)

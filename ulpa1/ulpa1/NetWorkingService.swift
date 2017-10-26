@@ -20,7 +20,7 @@ class NetWoringService{
     
     static let shared = NetWoringService()
     private init(){}
-    
+    // get all information of a courses
     func getCourse(languagename:String , success successBlock: @escaping (GetCourseResponse) -> Void) {
         Alamofire.request(url_api+languagename).responseJSON { response in
             
@@ -31,7 +31,7 @@ class NetWoringService{
             } catch {}
         }
     }
-    
+    // get avalible  language list
     func getLanguageName(success successBlock: @escaping (GetLanguage) -> Void) {
         Alamofire.request(url_languagename).responseJSON { response in
             guard let json = response.result.value as? JSON else { return }
@@ -41,6 +41,7 @@ class NetWoringService{
             } catch {}
         }
     }
+    // get avalible  universities with its states
     func getStateSchoolName(success successBlock: @escaping (GetStateSchool) -> Void) {
         Alamofire.request(url_stateSchool).responseJSON { response in
             guard let json = response.result.value as? JSON else { return }
@@ -50,6 +51,7 @@ class NetWoringService{
             } catch {}
         }
     }
+    // get all languages with its description
     func getLanguagedescription(success successBlock: @escaping (getDescription) -> Void) {
         Alamofire.request(url_getDescription).responseJSON { response in
             guard let json = response.result.value as? JSON else { return }

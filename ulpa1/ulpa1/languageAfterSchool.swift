@@ -97,12 +97,13 @@ class languageAfterSchool: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView?.reloadRows(at: [indexPath], with: .automatic)
     }
     
-  
+    
     @IBAction func btnClick(_ sender: AnyObject) {
         lanName.removeAll()
         for index in selectedIndexs {
             self.lanName.append(items[index])
         }
+        // if users do not select any language send all language names
         if self.lanName.count == 0{
             self.lanName = self.items
         }

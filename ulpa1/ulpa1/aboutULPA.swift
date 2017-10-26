@@ -17,6 +17,7 @@ class aboutULPA: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //play the video
     func loadYoutube(videoID:String) {
         guard
             let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoID)")
@@ -27,7 +28,7 @@ class aboutULPA: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

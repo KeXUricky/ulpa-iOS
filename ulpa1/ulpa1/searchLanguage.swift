@@ -4,13 +4,12 @@
 //  NetWorkingService.swift
 //  ulpa1
 //
-//  Created by Ke XU on 2017/89/28.
+//  Created by Ke XU on 2017/9/28.
 //  Copyright © 2017年 Unimelb. All rights reserved.
-//
+// control the first interface of Search By Language 
 import UIKit
 
 class searchLanguage: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     
     var items:[String] = []
     var lanuguage = [Language]()
@@ -32,7 +31,7 @@ class searchLanguage: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         var templist = [String]()
-        
+        // get the avaliable languages
         NetWoringService.shared.getLanguageName{ response in
             self.lanuguage = response.language
             for lang in self.lanuguage{
@@ -94,6 +93,7 @@ class searchLanguage: UIViewController, UITableViewDelegate, UITableViewDataSour
         for index in selectedIndexs {
             langlist.append(items[index])
         }
+        // show an alert if users did not select at least one language
         if langlist.count == 0{
             let myAlert = UIAlertController(title: "You must select at least one language!",
                                             message: nil, preferredStyle: UIAlertControllerStyle.alert)

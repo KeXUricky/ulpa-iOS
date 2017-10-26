@@ -39,7 +39,7 @@ class DetailVVC: UIViewController {
         self.moreInfo = course.url
         
     }
-    
+     // invoke the browser in iphone 
     @IBAction func btnClick(_ sender: UIButton) {
         let urlString = self.moreInfo
         if let url = URL(string: urlString!) {

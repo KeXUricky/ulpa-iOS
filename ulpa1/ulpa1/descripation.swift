@@ -36,7 +36,7 @@ class descripation: UIViewController {
          self.tableView.reloadData()
          }*/
     }
-    
+    // send selection object to destination view ontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "seeDescription",
             let ld = segue.destination as? languageDescription,
@@ -50,7 +50,7 @@ class descripation: UIViewController {
 
 
 
-
+// control the tableview to disaplay the infomation 
 extension descripation:UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

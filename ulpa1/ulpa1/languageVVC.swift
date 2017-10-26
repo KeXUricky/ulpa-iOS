@@ -83,6 +83,7 @@ extension languageVVC:UITableViewDelegate{
     }
 }
 extension Array {
+     // an function to filter duplicates items in an array
     func filterduplicates<E: Equatable>(_ filter: (Element) -> E) -> [Element] {
         var result = [Element]()
         for value in self {
